@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withUser should return a composed component 1`] = `
+<div>
+  <header
+    id="my-hoc-test"
+  />
+</div>
+`;
