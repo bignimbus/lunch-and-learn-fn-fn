@@ -1,18 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UserPageOne #render after user is fetched 1`] = `
-<div>
-  <h1>
-    foo
-    's Profile
-  </h1>
-</div>
-`;
-
-exports[`UserPageOne #render before user is fetched 1`] = `
-<div>
-  <h1>
-    's Profile
-  </h1>
-</div>
+exports[`UserPageOne #render 1`] = `
+<h1>
+  foo
+  's Profile
+</h1>
 `;

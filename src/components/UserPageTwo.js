@@ -1,33 +1,17 @@
 import React, { Component } from 'react';
-import UserService from '../services/UserService';
+import PropTypes from 'prop-types';
+import withUser from '../hocs/withUser';
 
-class UserPageTwo extends Component {
-  state = {
-    user: {},
-  };
+export const UserPageTwo = ({ user }) => (
+  <h1>{ user.username }'s Photos</h1>
+);
 
-  componentDidMount () {
-    this.getUser();
-  }
+UserPageTwo.propTypes = {
+  user: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
-  async getUser () {
-    const user = await UserService.getUser();
-    this.setState({ user });
-  }
+const UserPageTwoContainer = withUser(UserPageTwo);
 
-  render () {
-    const { user } = this.state;
-
-    return (
-      <div>
-        {
-          user ?
-            <h1>{ user.username }'s Photos</h1> :
-            <span>Loading...</span>
-        }
-      </div>
-    );
-  }
-}
-
-export default UserPageTwo;
+export default UserPageTwoContainer;
