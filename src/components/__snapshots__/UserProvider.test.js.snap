@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserProvider #render when user has been fetched 1`] = `
+<div>
+  <article
+    id="my-test"
+  />
+</div>
+`;
+
+exports[`UserProvider #render when user has not been fetched 1`] = `
+<div>
+  <span>
+    Loading...
+  </span>
+</div>
+`;
